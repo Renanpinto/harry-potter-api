@@ -1,6 +1,6 @@
 import { createConnection } from 'typeorm';
 import settings from '../../config';
-import CharactersRouter from './book';
+import CharactersRouter from './characters';
 import GetApiBooksRouter from './book/get-books';
 
 export default async (app) => {
