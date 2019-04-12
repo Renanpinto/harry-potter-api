@@ -2,7 +2,7 @@ import EVENTS from '../../../domain/global/events';
 
 const HTTP_METHODS_WITH_BODY = ['PATCH', 'POST', 'PUT'];
 
-class BookHandler {
+class Handler {
   constructor(request, response, command) {
     this.request = request;
     this.response = response;
@@ -56,4 +56,4 @@ class BookHandler {
   }
 }
 
-export default BookHandler;
+export default Handler;

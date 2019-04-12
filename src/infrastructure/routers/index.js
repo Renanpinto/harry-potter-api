@@ -1,7 +1,6 @@
 import { createConnection } from 'typeorm';
 import settings from '../../config';
 import CharactersRouter from './characters';
-import GetApiBooksRouter from './book/get-books';
 
 export default async (app) => {
   try {
@@ -13,7 +12,6 @@ export default async (app) => {
     const basePath = '/api/v1';
 
     app.use(`${basePath}/characters`, CharactersRouter());
-    app.use(`${basePath}/books`, GetApiBooksRouter());
   }
 
   return app;

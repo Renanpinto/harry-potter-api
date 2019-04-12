@@ -19,28 +19,28 @@ exports.up = knex => Promise.all([
           .string('house');
 
         table
-          .string('dateOfBirth');
+          .string('date_of_birth');
 
         table
-          .integer('yearOfBirth');
+          .integer('year_of_birth');
 
         table
           .string('ancestry');
 
         table
-          .string('eyeColour');
+          .string('eye_colour');
 
         table
-          .string('hairColour');
+          .string('hair_colour');
 
         table
           .string('patronus');
 
         table
-          .boolean('hogwartsStudent');
+          .boolean('hogwarts_student');
 
         table
-          .boolean('hogwartsStaff');
+          .boolean('hogwarts_staff');
 
         table
           .string('actor');

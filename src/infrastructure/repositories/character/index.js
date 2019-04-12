@@ -1,6 +1,6 @@
 import CharacterSchema from '../typeorm/schema/character';
 
-class BookRepository {
+class CharacterRepository {
   constructor(db) {
     this.db = db;
     this.entity = CharacterSchema;
@@ -37,4 +37,4 @@ class BookRepository {
   }
 }
 
-export default BookRepository;
+export default CharacterRepository;
