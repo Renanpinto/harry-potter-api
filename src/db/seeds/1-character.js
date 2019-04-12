@@ -2,6 +2,7 @@ exports.seed = function (knex) {
   return knex('harry_potter.character').del()
     .then(() => knex('harry_potter.character').insert([
       {
+        id: 1,
         name: 'Harry Potter',
         species: 'human',
         gender: 'male',
@@ -18,6 +19,7 @@ exports.seed = function (knex) {
         alive: true,
       },
       {
+        id: 2,
         name: 'Hermione Granger',
         species: 'human',
         gender: 'female',
@@ -34,6 +36,7 @@ exports.seed = function (knex) {
         alive: true,
       },
       {
+        id: 3,
         name: 'Ron Weasley',
         species: 'human',
         gender: 'male',
@@ -50,6 +53,7 @@ exports.seed = function (knex) {
         alive: true,
       },
       {
+        id: 4,
         name: 'Draco Malfoy',
         species: 'human',
         gender: 'male',
@@ -66,6 +70,7 @@ exports.seed = function (knex) {
         alive: true,
       },
       {
+        id: 5,
         name: 'Minerva McGonagall',
         species: 'human',
         gender: 'female',
@@ -82,6 +87,7 @@ exports.seed = function (knex) {
         alive: true,
       },
       {
+        id: 6,
         name: 'Cedric Diggory',
         species: 'human',
         gender: 'male',
@@ -98,12 +104,13 @@ exports.seed = function (knex) {
         alive: false,
       },
       {
+        id: 7,
         name: 'Cho Chang',
         species: 'human',
         gender: 'female',
         house: 'Ravenclaw',
         dateOfBirth: '',
-        yearOfBirth: '',
+        yearOfBirth: 0,
         ancestry: '',
         eyeColour: 'brown',
         hairColour: 'black',
@@ -114,6 +121,7 @@ exports.seed = function (knex) {
         alive: true,
       },
       {
+        id: 8,
         name: 'Severus Snape',
         species: 'human',
         gender: 'male',
@@ -130,6 +138,7 @@ exports.seed = function (knex) {
         alive: false,
       },
       {
+        id: 9,
         name: 'Rubeus Hagrid',
         species: 'half-giant',
         gender: 'male',
@@ -146,6 +155,7 @@ exports.seed = function (knex) {
         alive: true,
       },
       {
+        id: 10,
         name: 'Neville Longbottom',
         species: 'human',
         gender: 'male',
@@ -162,6 +172,7 @@ exports.seed = function (knex) {
         alive: true,
       },
       {
+        id: 11,
         name: 'Luna Lovegood',
         species: 'human',
         gender: 'female',
@@ -178,6 +189,7 @@ exports.seed = function (knex) {
         alive: true,
       },
       {
+        id: 12,
         name: 'Ginny Weasley',
         species: 'human',
         gender: 'female',
@@ -194,6 +206,7 @@ exports.seed = function (knex) {
         alive: true,
       },
       {
+        id: 13,
         name: 'Sirius Black',
         species: 'human',
         gender: 'male',
@@ -210,6 +223,7 @@ exports.seed = function (knex) {
         alive: false,
       },
       {
+        id: 14,
         name: 'Remus Lupin',
         species: 'werewolf',
         gender: 'male',
@@ -226,6 +240,7 @@ exports.seed = function (knex) {
         alive: false,
       },
       {
+        id: 15,
         name: 'Arthur Weasley',
         species: 'human',
         gender: 'male',
@@ -242,6 +257,7 @@ exports.seed = function (knex) {
         alive: true,
       },
       {
+        id: 16,
         name: 'Bellatrix Lestrange',
         species: 'human',
         gender: 'female',
@@ -258,6 +274,7 @@ exports.seed = function (knex) {
         alive: false,
       },
       {
+        id: 17,
         name: 'Lord Voldemort',
         species: 'human',
         gender: 'male',
@@ -274,12 +291,13 @@ exports.seed = function (knex) {
         alive: false,
       },
       {
+        id: 18,
         name: 'Horace Slughorn',
         species: 'human',
         gender: 'male',
         house: 'Slytherin',
         dateOfBirth: '',
-        yearOfBirth: '',
+        yearOfBirth: 0,
         ancestry: 'pure-blood',
         eyeColour: 'green',
         hairColour: 'blonde',
@@ -290,12 +308,13 @@ exports.seed = function (knex) {
         alive: true,
       },
       {
+        id: 19,
         name: 'Kingsley Shacklebolt',
         species: 'human',
         gender: 'male',
         house: '',
         dateOfBirth: '',
-        yearOfBirth: '',
+        yearOfBirth: 0,
         ancestry: 'pure-blood',
         eyeColour: 'brown',
         hairColour: 'brown',
@@ -306,12 +325,13 @@ exports.seed = function (knex) {
         alive: true,
       },
       {
+        id: 20,
         name: 'Dolores Umbridge',
         species: 'human',
         gender: 'female',
         house: 'Slytherin',
         dateOfBirth: '',
-        yearOfBirth: '',
+        yearOfBirth: 0,
         ancestry: 'half-blood',
         eyeColour: 'brown',
         hairColour: 'grey',
@@ -322,6 +342,7 @@ exports.seed = function (knex) {
         alive: true,
       },
       {
+        id: 21,
         name: 'Lucius Malfoy',
         species: 'human',
         gender: 'male',
@@ -338,12 +359,13 @@ exports.seed = function (knex) {
         alive: true,
       },
       {
+        id: 22,
         name: 'Vincent Crabbe',
         species: 'human',
         gender: 'male',
         house: 'Slytherin',
         dateOfBirth: '',
-        yearOfBirth: '',
+        yearOfBirth: 0,
         ancestry: 'pure-blood',
         eyeColour: 'black',
         hairColour: 'black',
@@ -354,12 +376,13 @@ exports.seed = function (knex) {
         alive: false,
       },
       {
+        id: 23,
         name: 'Gregory Goyle',
         species: 'human',
         gender: 'male',
         house: 'Slytherin',
         dateOfBirth: '',
-        yearOfBirth: '',
+        yearOfBirth: 0,
         ancestry: 'pure-blood',
         eyeColour: '',
         hairColour: 'brown',
@@ -370,12 +393,13 @@ exports.seed = function (knex) {
         alive: true,
       },
       {
+        id: 24,
         name: 'Mrs Norris',
         species: 'cat',
         gender: 'female',
         house: '',
         dateOfBirth: '',
-        yearOfBirth: '',
+        yearOfBirth: 0,
         ancestry: '',
         eyeColour: 'yellow',
         hairColour: 'brown',
@@ -386,12 +410,13 @@ exports.seed = function (knex) {
         alive: true,
       },
       {
+        id: 25,
         name: 'Argus Filch',
         species: 'human',
         gender: 'male',
         house: '',
         dateOfBirth: '',
-        yearOfBirth: '',
+        yearOfBirth: 0,
         ancestry: 'squib',
         eyeColour: '',
         hairColour: 'grey',
