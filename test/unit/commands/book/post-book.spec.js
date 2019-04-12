@@ -1,5 +1,5 @@
 import BookCommand from '../../../../src/domain/commands/book/index';
-import BookRepository from '../../../../src/infrastructure/repositories/book';
+import BookRepository from '../../../../src/infrastructure/repositories/character';
 import EVENTS from '../../../../src/domain/global/events';
 import setupListeners from '../../../helpers/setup-listeners';
 import bookMock from '../../../fixture/entity/book.mock';

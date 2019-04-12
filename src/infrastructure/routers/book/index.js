@@ -3,7 +3,7 @@ import buildHandler from '../handler';
 import BookFactory from '../../factories/book/book-factory';
 import GetAllBooksFactory from '../../factories/book/get-all-factory';
 import GetByIdBooksFactory from '../../factories/book/get-by-id-factory';
-import BookHandler from '../../http/book/book-handler';
+import BookHandler from '../../http/handler';
 
 const bookRouter = express.Router();
 

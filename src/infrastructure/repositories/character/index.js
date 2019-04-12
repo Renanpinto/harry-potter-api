@@ -35,10 +35,6 @@ class BookRepository {
 
     return { error, result };
   }
-
-  transaction(args, callback) {
-    return this.db.transaction(queryRunner => callback(queryRunner, args));
-  }
 }
 
 export default BookRepository;

@@ -1,6 +1,6 @@
 import BookCommand from '../../../../src/domain/commands/book/get-all-command';
 import BookByIdCommand from '../../../../src/domain/commands/book/get-by-id-command';
-import BookRepository from '../../../../src/infrastructure/repositories/book';
+import BookRepository from '../../../../src/infrastructure/repositories/character';
 import Db from '../../../../src/db';
 import EVENTS from '../../../../src/domain/global/events';
 import setupListeners from '../../../helpers/setup-listeners';

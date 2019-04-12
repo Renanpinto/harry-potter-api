@@ -5,7 +5,7 @@ dotenv.config();
 const config = {
   client: 'pg',
   connection: {
-    database: process.env.DATABASE_NAME || 'guia',
+    database: process.env.DATABASE_NAME || 'harry_potter',
     host: process.env.DATABASE_HOST || 'localhost',
     password: process.env.DATABASE_PASSWORD || 'root',
     port: process.env.DATABASE_PORT || 5432,
