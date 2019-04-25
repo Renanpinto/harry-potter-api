@@ -39,6 +39,7 @@
     "knex": "^0.16.5",
     "nodemon": "^1.18.11",
     "pg": "^7.10.0",
+    "pg-connection-string": "^2.0.0",
     "typeorm": "^0.2.16",
     "uuid": "^3.3.2"
   }
