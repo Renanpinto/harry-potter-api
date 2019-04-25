@@ -5,8 +5,8 @@ import TypeOrmConfigFactory from '../orm/typeorm/typeorm-config-factory';
 
 // dotenv.load();
 
-const config = process.env.DATABASE_URL || {
-  database: process.env.DATABASE_NAME,
+const config = {
+  database: process.env.DATABASE_URL || process.env.DATABASE_NAME,
   entities: [path.resolve(__dirname, '../../infrastructure/repositories/typeorm/schema/**/index.js')],
   extra: {
     max: process.env.DATABASE_POOL_SIZE || 5,
