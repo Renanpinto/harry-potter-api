@@ -15,11 +15,6 @@
     "start": "nodemon src/index.js --exec babel-node",
     "test": "jest --config test.json --forceExit"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run lint"
-    }
-  },
   "dependencies": {
     "axios": "^0.18.0",
     "babel-cli": "^6.26.0",

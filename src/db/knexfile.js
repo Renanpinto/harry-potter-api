@@ -1,10 +1,10 @@
 const dotenv = require('dotenv');
 
-dotenv.config();
+// dotenv.config();
 
 const config = {
   client: 'pg',
-  connection: {
+  connection: process.env.DATABASE_URL || {
     database: process.env.DATABASE_NAME || 'harry_potter',
     host: process.env.DATABASE_HOST || 'localhost',
     password: process.env.DATABASE_PASSWORD || 'root',
