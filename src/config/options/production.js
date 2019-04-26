@@ -4,11 +4,6 @@ import TypeOrmConfigFactory from '../orm/typeorm/typeorm-config-factory';
 
 const connectionOptions = PostgressConnectionStringParser.parse(process.env.DATABASE_URL);
 
-
-// const dotenv = require('dotenv');
-
-// dotenv.load();
-
 const config = {
   database: process.env.DATABASE_NAME || connectionOptions.database,
   host: process.env.DATABASE_HOST || connectionOptions.host,

@@ -3,7 +3,7 @@ import EVENTS from '../../global/events';
 
 const { success, internalError } = EVENTS;
 
-class CharacterCommand extends EventEmitter {
+class CharactersHousesCommand extends EventEmitter {
   constructor({ repository }) {
     super();
     this.repository = repository;
@@ -11,7 +11,9 @@ class CharacterCommand extends EventEmitter {
 
   async execute(params) {
     try {
-      const { error, result } = await this.repository.findAll(params);
+      const param = {};
+      param.house = params.house.charAt(0).toUpperCase() + params.house.slice(1);
+      const { error, result } = await this.repository.findAll(param);
       if (error) throw new Error(error);
       this.emit(success, result);
     } catch (exception) {
@@ -21,4 +23,4 @@ class CharacterCommand extends EventEmitter {
   }
 }
 
-export default CharacterCommand;
+export default CharactersHousesCommand;

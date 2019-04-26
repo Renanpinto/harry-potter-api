@@ -1,9 +1,9 @@
 import * as path from 'path';
 import TypeOrmConfigFactory from '../orm/typeorm/typeorm-config-factory';
 
-const dotenv = require('dotenv');
+// const dotenv = require('dotenv');
 
-dotenv.load();
+// dotenv.load();
 
 const config = {
   database: process.env.DATABASE_NAME,

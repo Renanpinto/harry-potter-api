@@ -1,6 +1,7 @@
 import express from 'express';
 import buildHandler from '../handler';
-import GetAllCharacters from '../../factories/characters/get-all-factory';
+import GetAllCharactersFactory from '../../factories/characters/get-all-factory';
+import GetCharactersHousesFactory from '../../factories/characters/get-characters-houses-factory';
 import Handler from '../../http/handler';
 
 const charactersRouter = express.Router();
@@ -13,7 +14,27 @@ const router = () => {
     .get(
       buildHandler(
         Handler,
-        GetAllCharacters,
+        GetAllCharactersFactory,
+      ),
+    );
+
+  // @GET /api/v1/characters/{student}
+  charactersRouter
+    .route('/:students')
+    .get(
+      buildHandler(
+        Handler,
+        GetAllCharactersFactory,
+      ),
+    );
+
+  // @GET /api/v1/characters/houses/:house
+  charactersRouter
+    .route('/houses/:house')
+    .get(
+      buildHandler(
+        Handler,
+        GetCharactersHousesFactory,
       ),
     );
 

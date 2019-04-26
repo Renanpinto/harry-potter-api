@@ -6,29 +6,14 @@ class CharacterRepository {
     this.entity = CharacterSchema;
   }
 
-  async findAll() {
-    const repository = await this.db.getRepository(this.entity);
-
-    let result = [];
-    let error = null;
-
-    try {
-      result = await repository.find();
-    } catch (exception) {
-      error = exception;
-    }
-
-    return { error, result };
-  }
-
-  async findById(params) {
+  async findAll(params = null) {
     const repository = await this.db.getRepository(this.entity);
 
     let result = null;
     let error = null;
 
     try {
-      result = await repository.findOne(params);
+      result = await repository.find(params);
     } catch (exception) {
       error = exception;
     }

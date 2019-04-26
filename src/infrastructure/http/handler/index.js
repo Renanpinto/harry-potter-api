@@ -1,3 +1,5 @@
+import _ from 'lodash';
+import humps from 'humps';
 import EVENTS from '../../../domain/global/events';
 
 const HTTP_METHODS_WITH_BODY = ['PATCH', 'POST', 'PUT'];
@@ -35,13 +37,41 @@ class Handler {
   }
 
   buildInput() {
-    const paramsSources = [this.request.params];
+    const queryParams = this.getQueryParams(this.request.query);
+    const headers = this.getHeadersInWhitelist(this.request.headers);
+    const paramsSources = [queryParams, this.request.params];
 
     if (HTTP_METHODS_WITH_BODY.includes(this.request.method)) {
       paramsSources.unshift(this.request.body);
     }
 
+    if (headers) {
+      paramsSources.push({ headers });
+    }
+
     return Object.assign({}, ...paramsSources);
+  }
+
+  getHeadersInWhitelist(headers) {
+    const camelCaseHeaders = humps.camelizeKeys(headers);
+
+    const whitelisted = _.pick(camelCaseHeaders, this.headersWhitelist);
+
+    return Object.keys(whitelisted).length !== 0 ? whitelisted : undefined;
+  }
+
+  getQueryParams(params) {
+    const queryParams = {};
+
+    Object.keys(params).forEach((queryParam) => {
+      try {
+        queryParams[queryParam] = JSON.parse(params[queryParam]);
+      } catch (error) {
+        queryParams[queryParam] = params[queryParam];
+      }
+    });
+
+    return queryParams;
   }
 
   async handle() {
