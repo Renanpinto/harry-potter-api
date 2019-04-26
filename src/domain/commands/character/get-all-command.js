@@ -11,7 +11,11 @@ class CharacterCommand extends EventEmitter {
 
   async execute(params) {
     try {
-      const { error, result } = await this.repository.findAll(params);
+      const search = params;
+      if (params.house) {
+        search.house = params.house.charAt(0).toUpperCase() + params.house.slice(1);
+      }
+      const { error, result } = await this.repository.findAll(search);
       if (error) throw new Error(error);
       if (!result.length) {
         this.emit(noContent);
