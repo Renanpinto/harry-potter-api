@@ -16,6 +16,7 @@
     "test": "jest --config test.json --forceExit"
   },
   "dependencies": {
+    "@hapi/joi": "^15.0.0",
     "axios": "^0.18.0",
     "babel-cli": "^6.26.0",
     "babel-eslint": "^10.0.1",
@@ -36,8 +37,7 @@
     "husky": "^2.1.0",
     "jest": "^24.7.1",
     "jest-junit": "^6.3.0",
-    "@hapi/joi": "^15.0.0",
-    "knex": "^0.16.5",
+    "knex": "^0.19.0",
     "lodash": "^4.17.11",
     "nodemon": "^1.18.11",
     "pg": "^7.10.0",
